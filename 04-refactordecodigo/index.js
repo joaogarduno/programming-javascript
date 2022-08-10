@@ -43,7 +43,7 @@ alert(`Tu eliges: ${eleccion(jugador)}`);
 if(jugador == pc){
     alert('Empate');
     // Se modifica codigo y se hace mas corto
-} else if((jugador == 1 && pc == 3) || (jugador == 2 && pc == 2) || (jugador == 3 && pc == 1)){
+} else if((jugador == 1 && pc == 3) || (jugador == 2 && pc == 1) || (jugador == 3 && pc == 2)){
     alert('Ganaste');
 } else{
     alert('Perdiste');

@@ -21,6 +21,7 @@ if(jugador == 1){
     alert(`Elegiste Tijera`);
 }
 // Todo el codigo que esta dentro de las llaves depende de esta condicion sea verdad
+// --------------
 
 
 
