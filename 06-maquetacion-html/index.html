@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokepon | Programacion Basica |</title>
+</head>
+<body>
+    <h1>¡MOKEPON! 🔥 🌊 🍃</h1>
+
+
+    <!-- Necesitamos varias seccion -->
+    <!-- Seleccionar mascota -->
+    <section id="selectPet">
+        <!-- Aqui vamos a darle la instruccion a los jugadores de que primero deben seleccionar a una mascota -->
+        <h2>Elige a tu mascota:</h2>
+
+        <button>Seleccionar</button>
+    </section>
+
+
+    <!-- Seleccionar ataque -->
+    <section id="selectAttack">
+        <!-- Ademas de los ataques de lo botones, necesitamos saber las vidas -->
+
+        <h2>Elige tu ataque:</h2>
+        <!-- Necesitamos que cada una de nuestras mascotas, tanto la de los jugadores como las mascotas que esten combatiendo contra las mascotas de nuestros jugadores, es decir contrincantes, tenemos que saber el numero de puntaje de vida de cada uno -->
+        <!-- Para que cuando las vidas lleguen a cero (0) hayamos perdido o hayamos ganado el juego -->
+
+        <p>Tu mascota tiene <span>3</span> vidas</p> <!-- Estos 2 parrafos tienen que ser dinamicos, esto significa que sus valores cambian constantemente -->
+
+        <p> Las mascota del enemigo tiene <span>3</span> vidas</p>
+
+        <!--  -->
+        <p>
+            <button>Fuego 🔥</button>
+            <button>Agua 🌊</button>
+            <button>Tierra 🍃</button>
+        </p>
+    </section>
+
+
+
+    <!-- Mensajes de los ataques -->
+    <section id="mensajes">
+        <p>Tu mascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA - GANASTE 🎉</p>
+    </section>
+
+
+
+    <!-- PEro que va a pasar depues de todo esto, cuando nuestros jugadores combatan entre sus mascotas y ganen y pierdan, pero digamos que ganan y derrotan a la mascosta del contrincante o enemigo, ¿Qué pasa depues? -->
+    <!-- Piensa en los juego que hemos jugado alguna vez, entonces, que pasa cuando terminas el juego, no el juego completo si no alguna partuida o algun combate ahi debe aparecer algun boton o alguna instruccion para volver a jugar, o jugar el siguiente nivel, algo debe suceder para poder estar enganchado en el juego -->
+    
+    <!-- Seccion que reiniciara el juego -->
+    <!-- Que puedan elegir su mascota y puedan empezar otra vez los combates entre mascotas, eligiendo sus ataques -->
+    <section id="reboot">
+        <button>Reiniciar</button>
+    </section>
+
+    
+</body>
+</html>
