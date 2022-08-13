@@ -16,6 +16,32 @@
         <!-- Aqui vamos a darle la instruccion a los jugadores de que primero deben seleccionar a una mascota -->
         <h2>Elige a tu mascota:</h2>
 
+        <!-- INPUTS -->
+        <!-- El "input" radio, es muy util cuando se ocupa en conjunto o en grupos -->
+        <!-- En este tipo de "inputs" lo que necesitamos es darle un identificador un atributo ID a estos inputs para saber cual es el valor de cada uno, cada uno de estos "inputs" debe representar alguna de nuestras mascotas -->
+
+        <!-- Cada una de estas mascotas deben ser representados con un "input", es decir cada "input" debe ser alguna de estas mascotas para que cuando demos click en el boton sea seleccionado la mascota -->
+
+        <!-- El atributo "for" de la etiqueta "label" nos ayuda a vincular un "label" con un "input" -->
+        <label for="hipodoge">Hipodoge</label>
+        <input id="hipodoge" type="radio" name="mascota">
+
+        <label for="capipepo">Capipepo</label>
+        <input id="capipepo" type="radio" name="mascota">
+
+        <label for="ratigueya">Ratigueya</label>
+        <input id="ratigueya" type="radio" name="mascota">
+
+        <!--
+            Hipodoge -> Agua
+            Capipepo -> Tierra
+            Ratigueya -> Fuego
+            Langostelvis -> Agua y Fuego
+            Tucapalma -> Agua y Tierra
+            Pydos -> Tierra y Fuego
+        -->
+
+
         <button>Seleccionar</button>
     </section>
 
