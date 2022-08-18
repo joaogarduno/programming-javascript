@@ -12,13 +12,17 @@ function selectPetsPlayer(){
     let inputSelect2 = document.querySelector('#capipepo');
     let inputSelect3 = document.querySelector('#ratigueya');
 
+    // Muestra mascota del jugador en el HTML
+    let spanPetPlayer = document.querySelector('#petPlayer');
+
     // condition
     if(inputSelect1.checked){
-        alert('Seleccionaste "Hipodoge"');
+        // alert('Seleccionaste "Hipodoge"');
+        spanPetPlayer.innerHTML = '<strong>Hipodoge</strong>';
     } else if(inputSelect2.checked){
-        alert('Seleccionaste "Capipepo"');
+        spanPetPlayer.innerHTML = '<strong>Capipepo</strong>';
     } else if(inputSelect3.checked){
-        alert('Seleccionaste "Ratigueya"');
+        spanPetPlayer.innerHTML = '<strong>Ratigueya</strong>';
     } else{
         alert('¡NO seleccionaste ninguna mascota!');
     }
