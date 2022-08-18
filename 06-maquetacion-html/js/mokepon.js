@@ -8,19 +8,20 @@ function startPlay(){
 // Seleccionando la mascota
 function selectPetsPlayer(){
     // let inputInfo = document.querySelector('#hipodoge').checked;
+    let inputSelect1 = document.querySelector('#hipodoge');
+    let inputSelect2 = document.querySelector('#capipepo');
+    let inputSelect3 = document.querySelector('#ratigueya');
 
     // condition
-    if(document.querySelector('#hipodoge').checked){
+    if(inputSelect1.checked){
         alert('Seleccionaste "Hipodoge"');
-    } else if(document.querySelector('#capipepo').checked){
+    } else if(inputSelect2.checked){
         alert('Seleccionaste "Capipepo"');
-    } else if(document.querySelector('#ratigueya').checked){
+    } else if(inputSelect3.checked){
         alert('Seleccionaste "Ratigueya"');
     } else{
-        alert('No seleccionaste ninguna mascota');
+        alert('¡NO seleccionaste ninguna mascota!');
     }
-    
-    // alert('Seleccionaste tu peleador');
 }
 
 // Metodo para nuestro navegador al cargar el HTML
