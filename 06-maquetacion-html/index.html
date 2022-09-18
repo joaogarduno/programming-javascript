@@ -59,7 +59,8 @@
 
         <p>La mascota <span id="petEnemy"></span> del enemigo tiene <span>3</span> vidas</p>
 
-        <!--  -->
+        <!-- BOTONES DE EVENTOS -->
+        <!-- Botones para lanzar una funcion con un escuchador de eventos -->
         <p>
             <button id="btn-fire">Fuego 🔥</button>
             <button id="btn-water">Agua 🌊</button>
@@ -70,13 +71,17 @@
 
 
     <!-- Mensajes de los ataques -->
-    <section id="mensajes">
-        <p>Tu mascota atacó con FUEGO, la mascota del enemigo atacó con TIERRA - GANASTE 🎉</p>
+    <section id="message-attack">
+        <!-- Vamos a crear desde JavaScript un parrafo por cada vez que los jugadores le den a los botones de ataque, cada vez que haya un combate entre jugadores y enemigos -->
+        <!-- Pero no vamos a editar el parrafo "<p>", lo que debemos hacer es crear un nuevo parrafo por cada ataque de nuestros jugadores -->
+        <!-- Para eso ya no nos sirve el mismo "innerHTML" que ocupamos en la seleccion de mascota, lo que necesitamos es un nuevo "metodo" de manipulación del DOM -->
+
+        <!-- Aqui se va a gregar el parrafo que agregamos desde javascript -->
     </section>
 
 
 
-    <!-- PEro que va a pasar depues de todo esto, cuando nuestros jugadores combatan entre sus mascotas y ganen y pierdan, pero digamos que ganan y derrotan a la mascosta del contrincante o enemigo, ¿Qué pasa depues? -->
+    <!-- Pero que va a pasar depues de todo esto, cuando nuestros jugadores combatan entre sus mascotas y ganen y pierdan, pero digamos que ganan y derrotan a la mascosta del contrincante o enemigo, ¿Qué pasa depues? -->
     <!-- Piensa en los juego que hemos jugado alguna vez, entonces, que pasa cuando terminas el juego, no el juego completo si no alguna partuida o algun combate ahi debe aparecer algun boton o alguna instruccion para volver a jugar, o jugar el siguiente nivel, algo debe suceder para poder estar enganchado en el juego -->
     
     <!-- Seccion que reiniciara el juego -->
