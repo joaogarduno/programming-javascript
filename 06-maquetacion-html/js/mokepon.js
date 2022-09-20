@@ -4,6 +4,11 @@
 let attackPlayer;
 let attackEnemy;
 
+// creamos 2 variables globales, 1 para las vidas del jugador y otra para la vida del enemigo
+let petPlayerLife = 3;
+let petEnemyLife = 3;
+
+
 
 // FUNCION - INICIAR JUEGO
 function startPlay(){
@@ -23,6 +28,8 @@ function startPlay(){
     let btnEarth = document.querySelector('#btn-earth');
     btnEarth.addEventListener('click', attackEarth);
 }
+
+
 
 // FUNCION - JUGADOR
 // Seleccionando la mascota
@@ -52,6 +59,8 @@ function selectPetsPlayer(){
     selectPetsEnemy();
 }
 
+
+
 // FUNCION - ENEMIGO O PC
 // Funcion de la seleccion de mascota del enemigo
 function selectPetsEnemy(){
@@ -73,8 +82,7 @@ function selectPetsEnemy(){
 
 
 
-
-// FUNCIONES - ATAQUES JUGADOR
+// FUNCIONES - ATAQUES JUGADOR SELECCIONADO POR JUGADOR
 // Con estas funciones de Fuego, Agua y Tierra vamos a modificar la variable global llamada "attackPlayer" o "ataqueJugador"
 function attackFire(){
     // Dentro de esta funcion asignamos un valor a la variable global
@@ -119,14 +127,31 @@ function randomAttackEnemy(){
 }
 
 
-// FUNCION - RESULTADO DE ATAQUE
+// Necesitamos revisar las vidas antes de que podamos lanzar un nuevo ataque tenemos que revisar si ya perdimos o si alguna de las mascotas ya murio o se le acabaron las vidas, es decir tiene 0 (cero) vidas para permitirnos lanzar un nuevo ataque
+
+// FUNCION - RESULTADO DE ATAQUE Ó COMBATE
+// Aqui esta la logica para saber si perdimos, ganamos o empatamos
 function resultAttack(){
+    // En esta funcion tiene mas sentido llamar a nuestras etiquetas <span> para cambiar la cantidad de vidas de nuestras mascotas que vamos a mostrar a nuestro jugador o nuestro enemigo.
+     // EVENTOS DE VIDAS DE LAS MASCOTAS
+     let spanLifePet = document.querySelector('#petLifePlayer');
+     let spanLifeEnemy = document.querySelector('#petLifeEnemy');
+
+    //  Condicionales de combate o de ataque
     if(attackPlayer == attackEnemy){
         resultFight = 'EMPATASTE 😒';
     } else if((attackPlayer == 'Agua' && attackEnemy == 'Fuego') || (attackPlayer == 'Tierra' && attackEnemy == 'Fuego') || (attackPlayer == 'Tierra' && attackEnemy == 'Agua')){
         resultFight = 'GANASTE 🎉';
+        // En el caso de que hayamos perdido decirle el numero de vidas despues de perder o ganar
+        petEnemyLife--;
+        // Las variables creadas para las vidas de nuestras mascotas las llamaremos cuando perdamos y perderemos vidas
+        spanLifeEnemy.innerHTML = petEnemyLife;
     } else if((attackPlayer == 'Fuego' && attackEnemy == 'Agua') || (attackPlayer == 'Fuego' && attackEnemy == 'Tierra') || (attackPlayer == 'Agua' && attackEnemy == 'Tierra')){
         resultFight = 'PERDISTE 😥';
+        // En el caso de que hayamos perdido decirle el numero de vidas despues de perder o ganar
+        petPlayerLife--;
+        // Las variables creadas para las vidas de nuestras mascotas las llamaremos cuando perdamos y perderemos vidas
+        spanLifePet.innerHTML = petPlayerLife;
     } else{
         resultFight = 'No elegiste un tipo de Ataque';
     }
@@ -154,10 +179,12 @@ function createMessage(){
 }
 
 
+
 // Funcion para dar un valor aleatorio en la seleccion de mascota del enemigo o de la PC
 function aleatorio(min, max){
     return Math.floor(Math.random()*(max - min + 1) + min);
 }
+
 
 
 // Metodo para nuestro navegador al cargar el HTML

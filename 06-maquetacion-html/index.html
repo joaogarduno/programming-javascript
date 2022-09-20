@@ -55,9 +55,10 @@
         <!-- Necesitamos que cada una de nuestras mascotas, tanto la de los jugadores como las mascotas que esten combatiendo contra las mascotas de nuestros jugadores, es decir contrincantes, tenemos que saber el numero de puntaje de vida de cada uno -->
         <!-- Para que cuando las vidas lleguen a cero (0) hayamos perdido o hayamos ganado el juego -->
 
-        <p>Tu mascota es <span id="petPlayer"></span> tiene <span>3</span> vidas</p> <!-- Estos 2 parrafos tienen que ser dinamicos, esto significa que sus valores cambian constantemente -->
+        <!-- Las vidas de nuestras mascotas deben ser dinamicas, es decir no siempre seran las mismas no siempre seran 3, entonces necesitamos darles un ID a estos <span> para que con Javascript podamos seleccionar a este elemento <span> y se puedan cambiar, es decir poder restarle o sumarle -->
+        <p>Tu mascota es <span id="petPlayer"></span> tiene <span id="petLifePlayer">3</span> vidas</p> <!-- Estos 2 parrafos tienen que ser dinamicos, esto significa que sus valores cambian constantemente -->
 
-        <p>La mascota <span id="petEnemy"></span> del enemigo tiene <span>3</span> vidas</p>
+        <p>La mascota <span id="petEnemy"></span> del enemigo tiene <span id="petLifeEnemy">3</span> vidas</p>
 
         <!-- BOTONES DE EVENTOS -->
         <!-- Botones para lanzar una funcion con un escuchador de eventos -->
