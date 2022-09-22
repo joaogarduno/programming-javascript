@@ -155,6 +155,27 @@ function resultAttack(){
     } else{
         resultFight = 'No elegiste un tipo de Ataque';
     }
+
+    // Cuando terminemos esta logica, entonces es aqui donde vamos a revisar las vidas, no queremos hacerlo antes de que suceda el combate, porque en realidad antes de comenzar el combate vamos a tener vidas, ambos bandos van a tener vidas
+    // Revisar vidas
+    reviewLives();
+}
+
+
+
+// FUNCION - REVISAR VIDAS
+// Esta funcion debe de ir a las variables "petPlayerLife" y "petEnemyLife" para revisar sus vidas y preguntar si estan en cero, es decir si estan en cero las del jugador entonces gano el enemigo y si es el enemigo entonces eso significa que gano el jugador
+function reviewLives(){
+    // hacemos condicional para preguntar si las vidas del enemigo son cero "0", es decir, si llegamos a cero aqui debemos anunciar que ganamos, "gano la mascota de nuestro jugador", pero que pasa si las vidas de nuestro enemigo no son cero "0" en ese caso tenemos otra validacion
+    if(petEnemyLife == 0){
+        // ganaste, agregamos el texto de victoria
+        createFinalMessage('Felicidades ganaste la batalla mas esperada!!! 🏆️');
+    } else if(petPlayerLife == 0){
+        // Si esto llegara a ser verdad significa que PERDIMOS
+        createFinalMessage('Lo sentimos has perdido la batalla 😭');
+    } //else{
+        // Pero si ninguna de las condiciones anteriores se cumple ambas mascotas estan listas para seguir combatiendo, por lo tanto si tenemos este "else", no tendriamos que hacer nada mas en realidad, debemos dejar que nuestro juego fluya normalmente
+    //}
 }
 
 
@@ -178,6 +199,19 @@ function createMessage(){
     messageSection.appendChild(paragraph);
 }
 
+
+// FUNCIÓN - MENSAJE FINAL - JUEGO TERMINADO
+function createFinalMessage(finalResult){
+    // Entonces lo que necesitamos es crear un nuevo mensaje, asi que la mayoria de esta logica si que la podemos reutilizar
+    let messageSection = document.querySelector('#message-attack');
+
+    let paragraph = document.createElement('p');
+
+    // Cambiamos el mensaje por uno nuevo
+    // para crear este nuevo mensaje necesitamos un nuevo "parametro" para que nos diga si perdimos o ganamos, porque en este caso no hay empate, solo necesitamos que nos diga un mensaje que nuestra mascota se quedo sin vida
+    paragraph.innerHTML = finalResult;
+    messageSection.appendChild(paragraph);
+}
 
 
 // Funcion para dar un valor aleatorio en la seleccion de mascota del enemigo o de la PC
